@@ -243,16 +243,15 @@ function getArtistByIndex(id, artists) {
 function get20s(artists){
   const twenty = []
   for(i=0; i<artists.length; i++){
-    const when = artists[i].years;
-
-    if(when >=1900 || when <=2000){
+    const when = artists[i].years.split(" ");
+    if(Number(when[0])>=1900){
       twenty.push(artists[i].name);
     }
-    console.log(twenty)
+    
   }
 
-
-  /* Code here */
+  return(twenty)
+  
 
 }
 
